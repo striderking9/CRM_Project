@@ -51,6 +51,9 @@ jobs:
       with:
         flutter-version: ${{ env.FLUTTER_VERSION }}
 
+    - name: Install Flet
+      run: pip install flet
+
     - name: Flet Build Web
       run: |
             echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}, USER: ${GITHUB_REPOSITORY%/*}, PROJECT_BASE_URL: ${GITHUB_REPOSITORY#*/}"
